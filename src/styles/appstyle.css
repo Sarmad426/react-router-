@@ -1,0 +1,29 @@
+.btn {
+  margin: 5px;
+  padding: 13px;
+  font-size: 18px;
+  font-weight: "inherit";
+  background-color: blueviolet;
+  color: #fdfdfd;
+  border-radius: 7px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+.btn:hover {
+  background-color: rgb(106, 26, 181);
+}
+
+#root {
+  text-align: center;
+  font-size: 24px;
+  font-family: "Bahnschrift";
+  font-weight: "inherit";
+  color: #232323;
+}
+#root .navbar {
+  display: flex;
+  justify-content: space-around;
+}
+#root .navbar .nav-item {
+  text-decoration: none;
+}/*# sourceMappingURL=appstyle.css.map */

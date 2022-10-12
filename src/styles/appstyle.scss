@@ -1,0 +1,42 @@
+@mixin flex($display, $content) {
+  display: $display;
+  justify-content: $content;
+}
+@mixin fontStyle($size, $weight, $color, $family) {
+  font-size: $size;
+  font-family: $family;
+  font-weight: $weight;
+  color: $color;
+}
+@mixin marginPadding($margin, $padding) {
+  margin: $margin;
+  padding: $padding;
+}
+@mixin btnStyle($margin, $padding, $size, $bgColor, $color, $radius) {
+  margin: $margin;
+  padding: $padding;
+  font-size: $size;
+  font-weight: "inherit";
+  background-color: $bgColor;
+  color: $color;
+  border-radius: $radius;
+}
+$btnColor: #fdfdfd;
+.btn {
+  @include btnStyle(5px, 13px, 18px, blueviolet, $btnColor, 7px);
+  transition: 0.3s ease;
+  text-decoration: none;
+  &:hover {
+    background-color: rgb(106, 26, 181);
+  }
+}
+#root {
+  text-align: center;
+  @include fontStyle(24px, "inherit", #232323, "Bahnschrift");
+  .navbar {
+    @include flex(flex, space-around);
+    .nav-item {
+      text-decoration: none;
+    }
+  }
+}
