@@ -1,3 +1,7 @@
+.red {
+  color: #ff1011;
+}
+
 .btn {
   margin: 5px;
   padding: 13px;
@@ -7,23 +11,100 @@
   color: #fdfdfd;
   border-radius: 7px;
   transition: 0.3s ease;
+  cursor: pointer;
   text-decoration: none;
 }
 .btn:hover {
   background-color: rgb(106, 26, 181);
 }
 
+body {
+  background-color: #232323;
+  color: #fdfdfd;
+  text-align: center;
+}
+
 #root {
   text-align: center;
+  margin: 10px;
+  padding: 10px;
   font-size: 24px;
   font-family: "Bahnschrift";
   font-weight: "inherit";
-  color: #232323;
+  color: inherit;
 }
 #root .navbar {
   display: flex;
   justify-content: space-around;
+  margin: 10px;
+  padding: 5px;
 }
 #root .navbar .nav-item {
   text-decoration: none;
+  color: inherit;
+}
+#root .navbar .active {
+  color: red;
+}
+#root .products {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#root .products .product {
+  margin: 10px;
+  padding: 10px;
+}
+#root .products .link {
+  color: aqua;
+}
+#root .products .link:visited {
+  color: aquamarine;
+}
+
+@media screen and (max-width: 600px) {
+  .products {
+    display: block;
+  }
+  .products .product {
+    color: brown;
+  }
+}
+h1 {
+  font-family: "Varela Round";
+}
+
+form {
+  text-align: center;
+  margin: auto;
+  box-shadow: 1px 1px 1px 1px whitesmoke;
+  width: 35rem;
+  padding: 20px;
+  border-radius: 10px;
+}
+form input {
+  width: 30rem;
+  height: 2.4rem;
+  border-radius: 10px;
+  margin: 30px;
+  padding: 10px;
+  font-size: 16px;
+}
+form input:focus {
+  outline-color: rgb(54, 160, 195);
+}
+form .submit {
+  width: 13rem;
+  font-size: 22px;
+  background-color: rgb(243, 204, 157);
+  color: #232323;
+  border: none;
+}
+form .submit:hover {
+  background-color: rgb(244, 213, 176);
+}
+
+img {
+  border-radius: 7px;
 }/*# sourceMappingURL=appstyle.css.map */

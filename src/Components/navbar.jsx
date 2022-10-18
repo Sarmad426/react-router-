@@ -1,16 +1,28 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 
 class Navbar extends React.Component {
+  handleClasses = ({ isActive }) => {
+    let classes = "nav-item ";
+    classes += isActive ? " active" : " not-active";
+    return classes;
+  };
+
   render() {
     return (
       <div className="navbar">
-        <Link to="/" className="nav-item">
+        <NavLink to="/" className={this.handleClasses}>
           Home
-        </Link>
-        <Link to="/about" className="nav-item">
+        </NavLink>
+        <NavLink to="/about" className={this.handleClasses}>
           About
-        </Link>
+        </NavLink>
+        <NavLink to="/products" className={this.handleClasses}>
+          Products
+        </NavLink>
+        <NavLink to="/login" className={this.handleClasses}>
+          Login
+        </NavLink>
         <Outlet />
       </div>
     );
